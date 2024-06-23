@@ -1,0 +1,3 @@
+[submodule "chemnlp"]
+	path = chemnlp
+	url = git@github.com:usnistgov/chemnlp.git
