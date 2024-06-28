@@ -58,3 +58,6 @@ Once datasets are ready, user can further train a deep learning model following 
 3. Pass the config file to the dl_regressors_tf2.py to start model training
 
   `python dl_regressors_tf2.py --config_file sample/example_alignn_bert-base-uncased_robo_prop_mbj_bandgap.config`
+
+
+## Acknowledgements
