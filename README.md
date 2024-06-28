@@ -9,7 +9,7 @@ This repository contains the code for Hybrid-LLM-GNN transfer learning framework
 
 ## Installation 
 
-The basic requirement for using the files are a Python 3.8 with the packages listed in requirements.txt. It is advisable to create a virtual environment with the correct dependencies.
+The basic requirement for using the files are a Python 3.9 with the packages listed in requirements.txt. It is advisable to create a virtual environment with the correct dependencies.
 
 ## Source Files
 
@@ -23,9 +23,9 @@ The basic requirement for using the files are a Python 3.8 with the packages lis
 
 User can follow the steps shown below in order to create Hybrid-LLM-GNN embeddings.
 
-1. Follow instructions in [ALIGNNTL: Feature Extraction]{https://github.com/NU-CUCIS/ALIGNNTL.git} to extract ALIGNN-based embeddings from pre-trained model
+1. Follow instructions in [ALIGNNTL: Feature Extraction](https://github.com/NU-CUCIS/ALIGNNTL.git) to extract ALIGNN-based embeddings from pre-trained model
    * Perform feature extraction  by running `create_features.sh` script
-   * Run the jupyter notebooks `pre-processing.ipynb` to convert the structure-wise features into a dataset (example output dataset file in['embeddings/data0.csv']{./data/embeddings/data0.csv})
+   * Run the jupyter notebooks `pre-processing.ipynb` to convert the structure-wise features into a dataset (example output GNN-embedding file in [embeddings/data0.csv](./data/embeddings/data0.csv))
 2. Git clone this repo with submodules loaded
    ```
    git clone --recurse-submodules <repository-url>
