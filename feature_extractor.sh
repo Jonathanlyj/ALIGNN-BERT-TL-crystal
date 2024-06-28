@@ -9,6 +9,6 @@ TEXT_VALUE=$1
 LLM_VALUE=$2
 
 # Run the python scripts with the provided arguments
-python generater.py --text "$TEXT_VALUE" # Use --end k to select an small subset
+python generater.py --text "$TEXT_VALUE --end 10" # Use --end k to select an small subset (the first k samples)
 python preprocess.py --llm "$LLM_VALUE" --text "$TEXT_VALUE" --cache_csv "./data/text/${TEXT_VALUE}_0_10_skip_none.csv"
 python features.py --gnn_file_path "./data/embeddings/data0.csv" --split_dir "./data/split/" --llm "$LLM_VALUE" --text "$TEXT_VALUE"
