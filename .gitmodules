@@ -1,3 +1,7 @@
 [submodule "chemnlp"]
 	path = chemnlp
 	url = git@github.com:usnistgov/chemnlp.git
+[submodule "CrossPropertyTL"]
+	path = CrossPropertyTL
+	url = git@github.com:Jonathanlyj/CrossPropertyTL.git
+	branch = llm_gnn_pub
