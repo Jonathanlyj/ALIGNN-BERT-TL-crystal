@@ -1,6 +1,7 @@
 
 *.csv
 !*/robo_0_10_skip_none.csv
+!*/dataset_alignn_bert-base-uncased_robo_prop_mbj_bandgap_*.csv
 
 *vscode/
 *.png
