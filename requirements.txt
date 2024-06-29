@@ -1,103 +1,103 @@
-absl-py @ file:///croot/absl-py_1686852429912/work
-accelerate @ git+https://github.com/huggingface/accelerate.git@54d670be4188d995775c492933814b5d31bf621a
-aiohttp @ file:///croot/aiohttp_1694181079612/work
-aiosignal @ file:///tmp/build/80754af9/aiosignal_1637843061372/work
+absl-py==1.4.0
+accelerate==0.25.0.dev0
+aiohttp==3.8.5
+aiosignal==1.2.0
 appdirs==1.4.4
 astor==0.8.1
-asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
+asttokens==2.0.5
 astunparse==1.6.3
-async-timeout @ file:///opt/conda/conda-bld/async-timeout_1664876359750/work
-attrs @ file:///croot/attrs_1668696182826/work
+async-timeout==4.0.2
+attrs==22.1.0
 Babel==2.12.1
-backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+backcall==0.2.0
 beautifulsoup4==4.12.2
 bitsandbytes==0.41.3
 blinker==1.4
-Bottleneck @ file:///opt/conda/conda-bld/bottleneck_1657175564434/work
+Bottleneck==1.3.5
 brotlipy==0.7.0
-cachetools @ file:///tmp/build/80754af9/cachetools_1619597386817/work
-certifi @ file:///croot/certifi_1690232220950/work/certifi
-cffi @ file:///croot/cffi_1670423208954/work
+cachetools==4.2.2
+certifi==2024.6.2
+cffi==1.15.1
 chardet==5.2.0
-charset-normalizer==3.1.0
+charset-normalizer==2.0.4
 ChemDataExtractor==1.3.0
-click @ file:///tmp/build/80754af9/click_1646056590078/work
+click==8.0.4
 cloudpickle==2.2.1
 colorama==0.4.6
-comm @ file:///croot/comm_1671231121260/work
+comm==0.1.2
 contourpy==1.1.0
-cryptography @ file:///croot/cryptography_1689373676338/work
+cryptography==41.0.2
 cssselect==1.2.0
 cycler==0.11.0
 datasets==2.14.6
 DAWG==0.8.0
-debugpy @ file:///croot/debugpy_1690905042057/work
-decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+debugpy==1.6.7
+decorator==5.1.1
 deepspeed==0.12.4
 dill==0.3.7
 dm-tree==0.1.8
 dnspython==2.4.2
 emmet-core==0.56.1
-executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+executing==0.8.3
 filelock==3.13.1
 flake8==6.1.0
-flatbuffers @ file:///home/ktietz/cip/python-flatbuffers_1634039120618/work
+flatbuffers==2.0
 fonttools==4.42.1
-frozenlist @ file:///croot/frozenlist_1670004507010/work
+frozenlist==1.3.3
 fsspec==2023.10.0
 future==0.18.3
-gast @ file:///Users/ktietz/demo/mc3/conda-bld/gast_1628588903283/work
+gast==0.4.0
 ghp-import==2.1.0
-google-auth @ file:///croot/google-auth_1694152708165/work
+google-auth==2.22.0
 google-auth-oauthlib==0.4.6
-google-pasta @ file:///Users/ktietz/demo/mc3/conda-bld/google-pasta_1630577991354/work
-grpcio @ file:///croot/grpc-suite_1685746860162/work
-h5py @ file:///tmp/build/80754af9/h5py_1608649014695/work
+google-pasta==0.2.0
+grpcio==1.48.2
+h5py==2.10.0
 hjson==3.1.0
 huggingface-hub==0.19.4
-idna @ file:///croot/idna_1666125576474/work
-importlib-metadata @ file:///croot/importlib-metadata_1678997070253/work
+idna==3.4
+importlib-metadata==6.0.0
 importlib-resources==6.0.1
 inflect==7.0.0
-ipykernel @ file:///croot/ipykernel_1691121631942/work
-ipython @ file:///croot/ipython_1691532092695/work
+ipykernel==6.25.0
+ipython==8.12.2
 jarvis-tools==2023.8.10
-jedi @ file:///tmp/build/80754af9/jedi_1644297102865/work
+jedi==0.18.1
 Jinja2==3.1.2
 joblib==1.3.2
-jupyter_client @ file:///croot/jupyter_client_1680171862562/work
-jupyter_core @ file:///croot/jupyter_core_1679906564508/work
+jupyter_client==8.1.0
+jupyter_core==5.3.0
 keras==2.11.0
-Keras-Preprocessing @ file:///tmp/build/80754af9/keras-preprocessing_1612283640596/work
+Keras-Preprocessing==1.1.2
 kiwisolver==1.4.5
 latexcodec==2.0.1
 libclang==16.0.6
 loralib==0.1.2
 lxml==4.9.3
-Markdown @ file:///croot/markdown_1671541909495/work
-MarkupSafe @ file:///opt/conda/conda-bld/markupsafe_1654597864307/work
+Markdown==3.4.1
+MarkupSafe==2.1.1
 matminer==0.8.0
 matplotlib==3.7.2
-matplotlib-inline @ file:///opt/conda/conda-bld/matplotlib-inline_1662014470464/work
+matplotlib-inline==0.1.6
 mccabe==0.7.0
 mergedeep==1.3.4
 mkdocs==1.5.2
 mkdocs-material==9.3.1
 mkdocs-material-extensions==1.1.1
 mkl-fft==1.3.6
-mkl-random @ file:///work/mkl/mkl_random_1682950433854/work
+mkl-random==1.2.2
 mkl-service==2.4.0
 monty==2023.9.5
 mp-api==0.35.1
 mpmath==1.3.0
 msgpack==1.0.5
-multidict @ file:///croot/multidict_1665674239670/work
+multidict==6.0.2
 multiprocess==0.70.15
-nest-asyncio @ file:///croot/nest-asyncio_1672387112409/work
+nest-asyncio==1.5.6
 networkx==3.1
 ninja==1.11.1.1
 nltk==3.8.1
-numexpr @ file:///croot/numexpr_1683221822650/work
+numexpr==2.8.4
 numpy==1.23.4
 nvidia-cublas-cu12==12.1.3.1
 nvidia-cuda-cupti-cu12==12.1.105
@@ -111,97 +111,100 @@ nvidia-cusparse-cu12==12.1.0.106
 nvidia-nccl-cu12==2.18.1
 nvidia-nvjitlink-cu12==12.3.52
 nvidia-nvtx-cu12==12.1.105
-oauthlib @ file:///croot/oauthlib_1679489621486/work
-opt-einsum @ file:///tmp/build/80754af9/opt_einsum_1621500238896/work
-packaging @ file:///croot/packaging_1693575174725/work
+oauthlib==3.2.2
+opt-einsum==3.3.0
+packaging==23.1
 paginate==0.5.6
 palettable==3.3.3
 pandas==1.5.2
-parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
+parso==0.8.3
 pathspec==0.11.2
 pdfminer.six==20221105
-peft @ git+https://github.com/huggingface/peft.git@d56df7fc64222e7844b4dde27668dc9772cf19e6
-pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
-pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+peft==0.7.1.dev0
+pexpect==4.8.0
+pickleshare==0.7.5
 Pillow==10.0.0
-platformdirs @ file:///croot/platformdirs_1692205439124/work
+pip==24.0
+platformdirs==3.10.0
 plotly==5.16.1
-prompt-toolkit @ file:///croot/prompt-toolkit_1672387306916/work
+prompt-toolkit==3.0.36
 protobuf==3.19.6
-psutil @ file:///opt/conda/conda-bld/psutil_1656431268089/work
-ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+psutil==5.9.0
+ptyprocess==0.7.0
 PubChemPy==1.0.4
-pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+pure-eval==0.2.2
 py-cpuinfo==9.0.0
 pyarrow==14.0.0
-pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
+pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pybtex==0.24.0
 pycodestyle==2.11.1
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pycparser==2.21
 pydantic==1.10.12
 pydocstyle==6.3.0
 pyflakes==3.1.0
-Pygments==2.16.1
-PyJWT @ file:///opt/conda/conda-bld/pyjwt_1657544592787/work
+Pygments==2.15.1
+PyJWT==2.4.0
 pymatgen==2023.3.23
 pymdown-extensions==10.3
 pymongo==4.5.0
 pynvml==11.5.0
-pyOpenSSL @ file:///croot/pyopenssl_1690223430423/work
+pyOpenSSL==23.2.0
 pyparsing==3.0.9
-PySocks @ file:///tmp/build/80754af9/pysocks_1605305812635/work
+PySocks==1.7.1
 python-crfsuite==0.9.9
-python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
-pytz @ file:///croot/pytz_1671697431263/work
+python-dateutil==2.8.2
+pytz==2022.7
 PyYAML==6.0.1
 pyyaml_env_tag==0.1
-pyzmq @ file:///croot/pyzmq_1686601365461/work
+pyzmq==25.1.0
 regex==2023.8.8
-requests @ file:///croot/requests_1690400202158/work
+requests==2.31.0
 requests-oauthlib==1.3.0
 robocrys==0.2.8
-rsa @ file:///tmp/build/80754af9/rsa_1614366226499/work
+rsa==4.7.2
 ruamel.yaml==0.17.32
 ruamel.yaml.clib==0.2.7
 safetensors==0.4.0
 scikit-learn==1.2.0
-scipy @ file:///croot/scipy_1691606680890/work/dist/scipy-1.11.1-cp39-cp39-linux_x86_64.whl#sha256=771fdae52630aa660eb5f4792df1a013cde34093b72f006c7ee1b7a031f02d0c
+scipy==1.11.1
 seaborn==0.13.2
-six @ file:///tmp/build/80754af9/six_1644875935023/work
+setuptools==68.0.0
+six==1.16.0
 snowballstemmer==2.2.0
 soupsieve==2.5
 spglib==2.0.2
-stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+stack-data==0.2.0
 sympy==1.12
 tabulate==0.9.0
 tenacity==8.2.3
 tensorboard==2.11.2
 tensorboard-data-server==0.6.1
-tensorboard-plugin-wit @ file:///home/builder/tkoch/workspace/tensorflow/tensorboard-plugin-wit_1658918494740/work/tensorboard_plugin_wit-1.8.1-py3-none-any.whl
+tensorboard-plugin-wit==1.8.1
 tensorflow==2.11.0
 tensorflow-estimator==2.11.0
 tensorflow-io-gcs-filesystem==0.34.0
 tensorflow-probability==0.19.0
-termcolor @ file:///croot/termcolor_1668084651543/work
+termcolor==2.1.0
 threadpoolctl==3.2.0
 tokenizers==0.15.0
 toolz==0.12.0
 torch==2.1.0
-tornado @ file:///croot/tornado_1690848263220/work
+tornado==6.3.2
 tqdm==4.66.1
-traitlets @ file:///croot/traitlets_1671143879854/work
-transformers @ git+https://github.com/huggingface/transformers.git@0ea42ef0f9f71deba7775ead33afa0e493823d60
+traitlets==5.7.1
+transformers==4.36.0.dev0
 triton==2.1.0
-typing_extensions @ file:///croot/typing_extensions_1690297465030/work
-tzdata @ file:///croot/python-tzdata_1690578112552/work
+typing_extensions==4.7.1
+tzdata==2023.3
 uncertainties==3.1.7
-urllib3 @ file:///croot/urllib3_1686163155763/work
+urllib3==1.26.16
 watchdog==3.0.0
-wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
-Werkzeug @ file:///croot/werkzeug_1679489717957/work
-wrapt @ file:///tmp/abs_c335821b-6e43-4504-9816-b1a52d3d3e1eel6uae8l/croots/recipe/wrapt_1657814400492/work
+wcwidth==0.2.5
+Werkzeug==2.2.3
+wheel==0.38.4
+wrapt==1.14.1
 xmltodict==0.13.0
 xxhash==3.4.1
-yarl @ file:///opt/conda/conda-bld/yarl_1661437085904/work
-zipp @ file:///croot/zipp_1672387121353/work
+yarl==1.8.1
+zipp==3.11.0
