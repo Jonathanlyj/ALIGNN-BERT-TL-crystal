@@ -61,3 +61,10 @@ Once datasets are ready, user can further train a deep learning model following 
 
 
 ## Acknowledgements
+This work was carried out with the support of the following fi-
+nancial assistance award 70NANB19H005 from U.S. Department
+of Commerce, National Institute of Standards and Technology as
+part of the Center for Hierarchical Materials Design (CHiMaD).
+Partial support is also acknowledged from NSF awards CMMI-
+2053929 and OAC-2331329, DOE award DE-SC0021399, and
+Northwestern Center for Nanocombinatorics. 
