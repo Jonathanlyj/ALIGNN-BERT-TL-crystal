@@ -42,7 +42,7 @@ User can follow the steps shown below in order to create Hybrid-LLM-GNN embeddin
 
 Once datasets are ready, user can further train a deep learning model following the steps shown below in order to predict material properties with concatended embeddings.
 
-1. Create config file to specify dataset path, model architecture, hyperparameters and other info in [`./CrossPropertyTL/sample/`](./CrossPropertyTL/sample/). Example config file provided [`here`](./CrossPropertyTL/sample/example_alignn_bert-base-uncased_robo_prop_mbj_bandgap.config)
+1. Create config file to specify dataset path, model architecture, hyperparameters and other info in [`./CrossPropertyTL/sample/`](./CrossPropertyTL/sample/). Example config file provided [`here`](https://github.com/Jonathanlyj/CrossPropertyTL/blob/7e39ae4f8bde8031bd99e7b5bd81ee9c6ab9f3b4/elemnet/sample/example_alignn_bert-base-uncased_robo_prop_mbj_bandgap.config)
 2. Make sure the filepaths of generated datasets from last step are corrected entered in conf file:
 
 ```
