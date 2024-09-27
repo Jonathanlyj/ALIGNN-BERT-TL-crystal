@@ -43,7 +43,7 @@ parser.add_argument('--text', help='text sources for sample', choices=['raw', 'c
 parser.add_argument('--llm', help='pre-trained llm to use', default='gpt2', type=str,required=False)
 parser.add_argument('--output_dir', help='path to the save output embedding', default="./data/embeddings//", type=str, required=False)
 parser.add_argument('--cache_csv', help='path that stores text', default=None, type=str, required=False)
-parser.add_argument('--skip_sentence', help='skip the ith sentence', default=None, required=False)
+parser.add_argument('--skip_sentence', help='text topic to skip', default=None, required=False)
 parser.add_argument('--mask_words', action='store_true', help='use cpu only', required=False)
 parser.add_argument('--sample', action='store_true', help='save samples from lists only', required=False)
 parser.add_argument('--cpu', action='store_true', help='use cpu only', required=False)
@@ -266,7 +266,7 @@ def preprocess_data(args):
     #tokenizer = AutoTokenizer.from_pretrained(model_name)
     llm = args.llm
     if llm == "matbert-base-cased":
-        tokenizer = BertTokenizerFast.from_pretrained(os.path.join("/path/to/matbert/model", llm), do_lower_case=False)
+        tokenizer = BertTokenizerFast.from_pretrained(os.path.join("./matbert", llm), do_lower_case=False)
     else:
         tokenizer = AutoTokenizer.from_pretrained(llm)
     #model = AutoModelForSequenceClassification.from_pretrained(model_name)
@@ -277,7 +277,7 @@ def preprocess_data(args):
         try:
             model = BertModel.from_pretrained(llm)
         except:
-            model = BertModel.from_pretrained(os.path.join("/path/to/matbert/model", llm))
+            model = BertModel.from_pretrained(os.path.join("./matbert", llm))
         
     elif "opt" in llm.lower():
         quantization_config = BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True)

@@ -40,16 +40,13 @@ parser.add_argument('--split_dir', type=str, required=False)
 parser.add_argument('--sample', action='store_true')
 parser.add_argument('--skip_sentence', help='skip the ith sentence', default=None, required=False)
 parser.add_argument('--mask_words', help='skip the ith word', default=None, required=False)
+parser.add_argument('--prop', help="specify property from 'formation_energy_peratom', 'ehull', 'mbj_bandgap', 'slme', 'spillage', 'magmom_outcar', 'Tc_supercon'", default='all', required=False)
 
 args =  parser.parse_args()
 config = configparser.ConfigParser()
 
 selected_samples = ["JVASP-1151"]
 
-def in_range(val, prop):
-    upper = float(config[f'prop:{prop}']['upper'])
-    lower = float(config[f'prop:{prop}']['lower'])
-    return lower <= val <=upper
 
 def prepare_dataset(args, prop):
     embeddings = []
@@ -102,9 +99,8 @@ def prepare_dataset(args, prop):
         dataset_filename = f"dataset_{args.llm.replace('/', '_')}_{args.text}_mask_{args.mask_words}_prop_{prop}"
     dataset_path = f"./data/{dataset_filename}"
     df_data['ids'] = df_data['ids'] + '.vasp'
-    if args.gnn_file_path:
+    if args.gnn_file_path:    
         df_gnn = pd.read_csv(args.gnn_file_path)
-
         dataset_path = dataset_path.replace("dataset_", "dataset_alignn_")
         if args.gnn_only:
             df_gnn = pd.read_csv(args.gnn_file_path)
@@ -112,6 +108,7 @@ def prepare_dataset(args, prop):
 
             dataset_path = dataset_path.replace("dataset_alignn", "alignn")
             df_data = df_data[[prop, "ids"]].merge(df_gnn, how='inner', left_on="ids", right_on="id", suffixes=('_lm', '_gnn'))
+
         else:
             df_gnn['id'] = df_gnn['id'] + '.vasp'
             df_data = df_data.merge(df_gnn, how='inner', left_on="ids", right_on="id", suffixes=('_lm', '_gnn'))
@@ -133,7 +130,9 @@ def prepare_dataset(args, prop):
                 split_dic = json.load(json_file)
             for subset in ["test", "val", "train"]:
                 sub_ids = [val+'.vasp' for val in split_dic[f"id_{subset}"]]
-                
+                if not set(sub_ids).issubset(df_data['ids']):
+                    logging.error(f"Subset {subset} not found in GNN or LLM embedding dataset for {prop} property. Skipping...")
+                    return None, None
                 df_datasub = df_data[df_data['ids'].isin(sub_ids)].drop(columns={"id", "full"}, errors='ignore')
                 df_datasub.to_csv(f"{dataset_path}_{subset}.csv")
                 print(f"{dataset_path}_{subset}: {len(df_datasub)}")
@@ -148,6 +147,9 @@ def prepare_dataset(args, prop):
 
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s', level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S') 
+    if args.prop != 'all':
+        assert args.prop in props
+        props = [args.prop]
     for prop in props:
         prepare_dataset(args, prop)
 
