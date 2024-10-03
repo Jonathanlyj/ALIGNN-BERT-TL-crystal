@@ -92,7 +92,10 @@ def prepare_dataset(args, prop):
     df_data = pd.DataFrame(embeddings, columns=col_names)
     df_data[prop] = labels
     df_data["ids"] = ids
-    dataset_filename = f"dataset_{args.llm.replace('/', '_')}_{args.text}_prop_{prop}"
+    if args.gnn_only:
+        dataset_filename = f"dataset_alignn_only_prop_{prop}"
+    else:
+        dataset_filename = f"dataset_{args.llm.replace('/', '_')}_{args.text}_prop_{prop}"
     if args.skip_sentence is not None:
         dataset_filename = f"dataset_{args.llm.replace('/', '_')}_{args.text}_skip_{args.skip_sentence}_prop_{prop}"
     if args.mask_words is not None:
@@ -106,7 +109,7 @@ def prepare_dataset(args, prop):
             df_gnn = pd.read_csv(args.gnn_file_path)
             df_gnn['id'] = df_gnn['id'] + '.vasp'
 
-            dataset_path = dataset_path.replace("dataset_alignn", "alignn")
+
             df_data = df_data[[prop, "ids"]].merge(df_gnn, how='inner', left_on="ids", right_on="id", suffixes=('_lm', '_gnn'))
 
         else:
