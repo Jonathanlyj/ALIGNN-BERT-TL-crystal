@@ -11,7 +11,7 @@ This repository contains the code for Hybrid-LLM-GNN transfer learning framework
 
 The basic requirement for using the files are a Python 3.9 with the packages listed in requirements.txt. It is advisable to create a virtual environment with the correct dependencies.
 
-## Source code
+## Source code for proposed approach
 * [`ALIGNN_BERT_TL.ipynb`](./ALIGNN_BERT_TL.ipynb): a Google Colab notebook that sets up enviroment/installation, loads input data, extracts features and runs through the modelling pipeline with example dataset.
 * [`generator.py`](./generator.py): code to generate text descriptions for crystal samples using Robocystallographer and ChemNLP tools.
 * [`preprocess.py`](./preprocess.py): code to extract contextual-aware word embeddings from text representations.
@@ -21,13 +21,13 @@ The basic requirement for using the files are a Python 3.9 with the packages lis
    * [`/sample`]: the config files folder that stores configuration for each run.
    * [`/log`]: training logs saved which saved the printouts during training & evaluating.
    * [`/model`]: saved model instances after each training.
-* [`baseline`](./baseline): tree-based baseline model files
-   * [`/run.py`]: Adapted from [JARVIS leaderboard](https://github.com/usnistgov/jarvis_leaderboard/blob/main/jarvis_leaderboard/contributions/matminer_xgboost/run.py). This script runs through matminer feature generation and xgboost modeling for all properties. The training and evaluation use the same dataset as in `data/split`. 
 * [`analysis`](./analysis): script code to parse predictions and create visualizations for model performance analysis and text-based model explanation.
 
 ## Other Files
 * [`matbert`](./matbert): downloaded matbert llm model instance
 * [`alignn_scratch`](./alignn_scratch): config files and metadata generation codes for running ALIGNN scratch model
+* [`baseline`](./baseline): tree-based baseline model files
+   * [`/run.py`]: Adapted from [JARVIS leaderboard](https://github.com/usnistgov/jarvis_leaderboard/blob/main/jarvis_leaderboard/contributions/matminer_xgboost/run.py). This script runs through matminer feature generation and xgboost modeling for all properties. The training and evaluation use the same dataset as in `data/split`. 
 * [`chemnlp`](./chemnelp): chemnlp python library used fro generating chemnlp text
 * [`data/text`](./data/text): staging csv files that contain generated text descriptions for crystal samples. Outputs from `generator.py`
 * [`data/split`](./data/split): JSON files containing sample IDs used in training, validation and testing. Used in `feature.py`.
