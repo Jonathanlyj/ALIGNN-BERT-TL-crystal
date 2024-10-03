@@ -27,12 +27,13 @@ The basic requirement for using the files are a Python 3.9 with the packages lis
 
 ## Other Files
 * [`matbert`](./matbert): downloaded matbert llm model instance
+* [`alignn_scratch`](./alignn_scratch): config files and metadata generation codes for running ALIGNN scratch model
 * [`chemnlp`](./chemnelp): chemnlp python library used fro generating chemnlp text
 * [`data/text`](./data/text): staging csv files that contain generated text descriptions for crystal samples. Outputs from `generator.py`
 * [`data/split`](./data/split): JSON files containing sample IDs used in training, validation and testing. Used in `feature.py`.
 * [`data/embeddings/`](./data/embeddings/): data folder that stores generated GNN embeddings and LLM embeddings
    * `embeddings_[bert-base-uncased/matbert-base-cased]_[robo/chemnlp]_*.csv`: LLM embeddings generated from text. Outputs from `preprocess.py`. Staging text description csv file (`robo_0_75993.csv`) for robocrstallographer is available [online](https://figshare.com/articles/dataset/ALIGNN_BERT_TL_project_dataset/27115465)
-   * `data0.csv`: ALIGNN embeddings generated from [ALIGNNTL: Feature Extraction](https://github.com/NU-CUCIS/ALIGNNTL.git). `data0.csv` contains all 75K dft-3d samples, which is available [online](https://figshare.com/articles/dataset/ALIGNN_BERT_TL_project_dataset/27115465) 
+   * `data0.csv`: ALIGNN embeddings generated from [ALIGNNTL: Feature Extraction](https://github.com/NU-CUCIS/ALIGNNTL.git) using the formation energy model basedon MP project dataset as source model. `data0.csv` contains all 75K dft-3d samples, which is available [online](https://figshare.com/articles/dataset/ALIGNN_BERT_TL_project_dataset/27115465) 
 * [`data/dataset_alignn_[bert-base-uncased/matbert-base-cased]_[robo/chemnlp]_[property]_[train/val/test].csv`]: Feature dataset for forward model training to predict material properties. Outputs from `feature.py`.
 
 
