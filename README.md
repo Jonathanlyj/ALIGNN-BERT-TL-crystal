@@ -47,9 +47,9 @@ User can follow the steps shown below in order to create Hybrid-LLM-GNN embeddin
    ```
    git clone --recurse-submodules <repository-url>
    ```
-2. ALIGNN-based embeddings: Download ALIGNN embeddings for 75k dft-3d dataset [online](`https://figshare.com/s/4c190fb6fe7335bda205`) and store under `data/embeddings/`. Or follow instructions in [ALIGNNTL: Feature Extraction](https://github.com/NU-CUCIS/ALIGNNTL.git) to extract ALIGNN-based embeddings from pre-trained ALIGNN model
-   * Perform feature extraction  by running `create_features.sh` script
-   * Run the jupyter notebooks `pre-processing.ipynb` to convert the structure-wise features into a dataset (example output GNN-embedding file in [embeddings/data0_spillage.csv](./data/embeddings/data0_spillage.csv, which contains all samples needed for property Spillage))
+2. ALIGNN-based embeddings: Download ALIGNN embeddings (staging data) for 75k dft-3d dataset [online](`https://figshare.com/s/4c190fb6fe7335bda205`) and store under `data/embeddings/`. The source model used is the formation energy model trained on MP project dataset. Alternatively, follow instructions in [ALIGNNTL: Feature Extraction](https://github.com/NU-CUCIS/ALIGNNTL.git) to extract ALIGNN-based embeddings from pre-trained ALIGNN model
+   * Perform feature extraction  by running `create_features.sh` script.
+   * Run the jupyter notebooks `pre-processing.ipynb` to convert the structure-wise features into a dataset. Output: `/embeddings/data0.csv`. 
 
 3. LLM-based embeddings generation and concatenation: Once the GNN embeddings are extracted, start generating LLM feature extraction by running the 'feature_extractor' script by specifying the text source (Robocystallographer or ChemNLP) and LLM model (BERT or MatBERT):
    
@@ -78,7 +78,7 @@ Once datasets are ready, user can further train a deep learning model following 
   
 3. Pass the config file to the dl_regressors_tf2.py to start model training
 
-  `python dl_regressors_tf2.py --config_file sample/example_alignn_bert-base-uncased_robo_prop_mbj_bandgap.config`
+  `python dl_regressors_tf2.py --config_file sample/example_alignn_matbert-base-cased_robo_prop_mbj_bandgap.config`
 
 ## Baseline Models for Comparison
 
