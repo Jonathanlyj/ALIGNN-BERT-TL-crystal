@@ -12,7 +12,7 @@ This repository contains the code for Hybrid-LLM-GNN transfer learning framework
 The basic requirement for using the files are a Python 3.9 with the packages listed in requirements.txt. It is advisable to create a virtual environment with the correct dependencies.
 
 ## Source code
-
+* [`ALIGNN_BERT_TL.ipynb`](./ALIGNN_BERT_TL.ipynb): a Google Colab notebook that sets up enviroment/installation, loads input data, extracts features and runs through the modelling pipeline with example dataset.
 * [`generator.py`](./generator.py): code to generate text descriptions for crystal samples using Robocystallographer and ChemNLP tools.
 * [`preprocess.py`](./preprocess.py): code to extract contextual-aware word embeddings from text representations.
 * [`feature.py`](./feature.py): code to combine LLM-based and GNN-based embeddings and construct datasets for predictor model.
@@ -79,6 +79,18 @@ Once datasets are ready, user can further train a deep learning model following 
 
   `python dl_regressors_tf2.py --config_file sample/example_alignn_bert-base-uncased_robo_prop_mbj_bandgap.config`
 
+## Baseline Models for Comparison
+
+In addition to the proposed Hybrid-GNN-LLM transfer learning method, this work involves multiple baseline models for comparison. 
+
+* Tree-based ML regressor with Matminer features. Run the following command to reproduce the performance of xgboost tree regressor in JARVIS leaderboard  on this dataset
+   ```
+   python ./baseline/run.py
+   ```
+
+* ALIGNN scratch model with structure files of crystal samples. To reproduce the performance vanilla ALIGNN on this dataset, please refer to [alignn](https://github.com/usnistgov/alignn.git) codebase and follow the instructions in ths published repo. Specify the config file as in the example commands with config files under  `/alignn_scratch` folder for each property. In terms of `id_prop.csv` file and structure files `JVASP-*.vasp` required for training, please refer to `/alignn_scratch/dataset.ipynb` to generate for this dataset.
+
+* ALIGNNTL appraoch (with ALIGNN embeddings only). To reproduce the performance ALIGNNTL method on this dataset, Refer to the Abalation Study section in `ALIGNN_BERT_TL.ipynb` for detailed instructions.
 
 ## Acknowledgements
 This work was carried out with the support of the following fi-
