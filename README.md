@@ -17,10 +17,10 @@ The basic requirement for using the files are a Python 3.9 with the packages lis
 * [`preprocess.py`](./preprocess.py): code to extract contextual-aware word embeddings from text representations.
 * [`feature.py`](./feature.py): code to combine LLM-based and GNN-based embeddings and construct datasets for predictor model.
 * [`CrossPropertyTL`](./CrossPropertyTL): contains code for training and inferring a forward model with fully-connected layers to predict material properties. The model architecture is a straightforward MLP with fully connected layers and is not the primary focus of this research.
-   * [`/elemnet/dl_regressors_tf2.py`]: the main model training script which trains a model based on the config file and then evaluating performance by the testset.
-   * [`/sample`]: the config files folder that stores configuration for each run.
-   * [`/log`]: training logs saved which saved the printouts during training & evaluating.
-   * [`/model`]: saved model instances after each training.
+   * `/elemnet/dl_regressors_tf2.py`: the main model training script which trains a model based on the config file and then evaluating performance by the testset.
+   * `/sample`: the config files folder that stores configuration for each run.
+   * `/log`: training logs saved which saved the printouts during training & evaluating.
+   * `/model`: saved model instances after each training.
 * [`analysis`](./analysis): script code to parse predictions and create visualizations for model performance analysis and text-based model explanation.
 
 ## Other Files
@@ -34,7 +34,7 @@ The basic requirement for using the files are a Python 3.9 with the packages lis
 * [`data/embeddings/`](./data/embeddings/): data folder that stores generated GNN embeddings and LLM embeddings
    * `embeddings_[bert-base-uncased/matbert-base-cased]_[robo/chemnlp]_*.csv`: LLM embeddings generated from text. Outputs from `preprocess.py`. Staging text description csv file (`robo_0_75993.csv`) for robocrstallographer is available [online](https://figshare.com/articles/dataset/ALIGNN_BERT_TL_project_dataset/27115465)
    * `data0.csv`: ALIGNN embeddings generated from [ALIGNNTL: Feature Extraction](https://github.com/NU-CUCIS/ALIGNNTL.git) using the formation energy model basedon MP project dataset as source model. `data0.csv` contains all 75K dft-3d samples, which is available [online](https://figshare.com/articles/dataset/ALIGNN_BERT_TL_project_dataset/27115465) 
-* [`data/dataset_alignn_[bert-base-uncased/matbert-base-cased]_[robo/chemnlp]_[property]_[train/val/test].csv`]: Feature dataset for forward model training to predict material properties. Outputs from `feature.py`.
+* `data/dataset_alignn_[bert-base-uncased/matbert-base-cased]_[robo/chemnlp]_[property]_[train/val/test].csv`: Feature dataset for forward model training to predict material properties. Outputs from `feature.py`.
 
 
 
