@@ -21,6 +21,7 @@ The basic requirement for using the files are a Python 3.9 with the packages lis
    * `/sample`: the config files folder that stores configuration for each run.
    * `/log`: training logs saved which saved the printouts during training & evaluating.
    * `/model`: saved model instances after each training.
+   * `/prediction`: stores predictions for test set after running the train pipeline
 * [`analysis`](./analysis): script code to parse predictions and create visualizations for model performance analysis and text-based model explanation.
 
 ## Other Files
