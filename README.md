@@ -89,7 +89,7 @@ In addition to the proposed Hybrid-GNN-LLM transfer learning method, this work i
    python ./baseline/run.py
    ```
 
-* ALIGNN scratch model with structure files of crystal samples. To reproduce the performance vanilla ALIGNN on this dataset, please refer to [alignn](https://github.com/usnistgov/alignn.git) codebase and follow the instructions in ths published repo. Specify the config file as in the example commands with config files under  `/alignn_scratch` folder for each property. In terms of `id_prop.csv` file and structure files `JVASP-*.vasp` required for training, please refer to `/alignn_scratch/dataset.ipynb` to generate for this dataset.
+* ALIGNN scratch model with structure files of crystal samples. To reproduce the performance vanilla ALIGNN on this dataset, please refer to [alignn](https://github.com/usnistgov/alignn.git) codebase and follow the instructions in ths published repo. Specify the config file as in the example commands with config files under  `/alignn_scratch` folder for each property. In terms of `id_prop.csv` file and structure files `JVASP-*.vasp` required for training, please refer to `/alignn_scratch/dataset.ipynb` to generate for this dataset. Remember to create a new python env with ALIGNN repo dependencies before running ALIGNN scratch model.
 
 * ALIGNNTL appraoch (with ALIGNN embeddings only). To reproduce the performance ALIGNNTL method on this dataset, Refer to the Abalation Study section in `ALIGNN_BERT_TL.ipynb` for detailed instructions.
 
