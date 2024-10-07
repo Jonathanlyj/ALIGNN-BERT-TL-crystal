@@ -12,7 +12,7 @@ This repository contains the code for Hybrid-LLM-GNN transfer learning framework
 The basic requirement for using the files are a Python 3.9 with the packages listed in requirements.txt. It is advisable to create a virtual environment with the correct dependencies.
 
 ## Source code for proposed approach
-* [`ALIGNN_BERT_TL.ipynb`](./ALIGNN_BERT_TL.ipynb): a Google Colab notebook that sets up enviroment/installation, loads input data, extracts features and runs through the modelling pipeline with example dataset.
+* [`ALIGNN_BERT_TL.ipynb`](./ALIGNN_BERT_TL.ipynb): a example notebook that sets up enviroment/installation, loads input data, extracts features and runs through the modelling pipeline with example dataset. Also accessible online at [`Google Colab`](https://colab.research.google.com/drive/1MVldJ7pcExAZbLBF7sTcCIG4raHRRPZY?usp=sharing)
 * [`generator.py`](./generator.py): code to generate text descriptions for crystal samples using Robocystallographer and ChemNLP tools.
 * [`preprocess.py`](./preprocess.py): code to extract contextual-aware word embeddings from text representations.
 * [`feature.py`](./feature.py): code to combine LLM-based and GNN-based embeddings and construct datasets for predictor model.

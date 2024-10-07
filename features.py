@@ -93,7 +93,7 @@ def prepare_dataset(args, prop):
     df_data[prop] = labels
     df_data["ids"] = ids
     if args.gnn_only:
-        dataset_filename = f"dataset_alignn_only_prop_{prop}"
+        dataset_filename = f"dataset_only_prop_{prop}"
     else:
         dataset_filename = f"dataset_{args.llm.replace('/', '_')}_{args.text}_prop_{prop}"
     if args.skip_sentence is not None:
