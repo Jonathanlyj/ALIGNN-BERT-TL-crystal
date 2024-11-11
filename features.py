@@ -119,32 +119,33 @@ def prepare_dataset(args, prop):
         df_data[prop] = df_data.pop(prop)
         df_data["ids"] = df_data.pop("ids")
 
-        if args.split_dir:
-            split_path = os.path.join(args.split_dir, f"dataset_split_{prop}.json")
-            assert prop in split_path
-            # for subset in ["test", "val", "train"]:
-            #     sub_filename = f"{dataset_filename}_{subset}.csv"
-            #     df_sub = pd.read_csv(os.path.join(args.split_dir, sub_filename))
-            #     df_sub['ids'] = df_sub['ids'] + '.vasp'
-            #     df_datasub = df_data[df_data["ids"].isin(df_sub["ids"])].drop(columns={"jid", "jid.1"})
-            #     df_datasub.to_csv(f"{dataset_path}_{subset}.csv")
-            #     logging.info(f"Saved {subset} dataset to {dataset_path}_{subset}.csv")
-            with open(split_path, 'r') as json_file:
-                split_dic = json.load(json_file)
-            for subset in ["test", "val", "train"]:
-                sub_ids = [val+'.vasp' for val in split_dic[f"id_{subset}"]]
-                if not set(sub_ids).issubset(df_data['ids']):
-                    logging.error(f"Subset {subset} not found in GNN or LLM embedding dataset for {prop} property. Skipping...")
-                    return None, None
-                df_datasub = df_data[df_data['ids'].isin(sub_ids)].drop(columns={"id", "full"}, errors='ignore')
-                df_datasub.to_csv(f"{dataset_path}_{subset}.csv")
-                print(f"{dataset_path}_{subset}: {len(df_datasub)}")
-                logging.info(f"Saved {subset} dataset to {dataset_path}_{subset}.csv")
-        
-        else:
-            logging.info(f"Constructed {df_data.shape[0]} samples for {prop} property")
-            df_data.to_csv(f"{dataset_path}.csv")
-            logging.info(f"Saved dataset to {dataset_path}.csv")
+    if args.split_dir:
+        split_path = os.path.join(args.split_dir, f"dataset_split_{prop}.json")
+        assert prop in split_path
+        # for subset in ["test", "val", "train"]:
+        #     sub_filename = f"{dataset_filename}_{subset}.csv"
+        #     df_sub = pd.read_csv(os.path.join(args.split_dir, sub_filename))
+        #     df_sub['ids'] = df_sub['ids'] + '.vasp'
+        #     df_datasub = df_data[df_data["ids"].isin(df_sub["ids"])].drop(columns={"jid", "jid.1"})
+        #     df_datasub.to_csv(f"{dataset_path}_{subset}.csv")
+        #     logging.info(f"Saved {subset} dataset to {dataset_path}_{subset}.csv")
+        with open(split_path, 'r') as json_file:
+            split_dic = json.load(json_file)
+        for subset in ["test", "val", "train"]:
+            sub_ids = [val+'.vasp' for val in split_dic[f"id_{subset}"]]
+            if not set(sub_ids).issubset(df_data['ids']):
+                logging.error(f"Subset {subset} not found in GNN or LLM embedding dataset for {prop} property. Skipping...")
+                return None, None
+            df_datasub = df_data[df_data['ids'].isin(sub_ids)].drop(columns={"id", "full"}, errors='ignore')
+            df_datasub.to_csv(f"{dataset_path}_{subset}.csv")
+            print(f"{dataset_path}_{subset}: {len(df_datasub)}")
+            logging.info(f"Saved {subset} dataset to {dataset_path}_{subset}.csv")
+    
+    else:
+        logging.info(f"Constructed {df_data.shape[0]} samples for {prop} property")
+        df_data.to_csv(f"{dataset_path}.csv")
+        logging.info(f"Saved dataset to {dataset_path}.csv")
+
 
     return embeddings, labels
 

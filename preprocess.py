@@ -124,7 +124,7 @@ def remove_sentence_by_index(input_string, criteria, input_type=None):
                 # Skip sentences containing 'atoms' (atoms info)
                 continue
             filtered_sentences.append(sent.strip())
-        return ' '.join(filtered_sentences)
+    return ' '.join(filtered_sentences)
 
         
 
