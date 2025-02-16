@@ -94,6 +94,19 @@ In addition to the proposed Hybrid-GNN-LLM transfer learning method, this work i
 
 * ALIGNNTL appraoch (with ALIGNN embeddings only). To reproduce the performance ALIGNNTL method on this dataset, Refer to the Abalation Study section in `ALIGNN_BERT_TL.ipynb` for detailed instructions.
 
+## Publication
+
+1. Youjia Li, Vishu Gupta, Muhammed Nur Talha Kilic, Kamal Choudhary, Daniel Wines, Wei-keng Liao, Alok Choudhary, and Ankit Agrawal, “Hybrid-LLM-GNN: integrating large language models and graph neural networks for enhanced materials property prediction,” Digital Discovery, 2025. [<a href="https://pubs.rsc.org/en/content/articlepdf/2025/dd/d4dd00199k">PDF</a>]
+```tex
+@article{li2025hybrid,
+  title={Hybrid-LLM-GNN: integrating large language models and graph neural networks for enhanced materials property prediction},
+  author={Li, Youjia and Gupta, Vishu and Kilic, Muhammed Nur Talha and Choudhary, Kamal and Wines, Daniel and Liao, Wei-keng and Choudhary, Alok and Agrawal, Ankit},
+  journal={Digital Discovery},
+  year={2025},
+  publisher={Royal Society of Chemistry}
+}
+```
+
 ## Acknowledgements
 This work was carried out with the support of the following fi-
 nancial assistance award 70NANB19H005 from U.S. Department
