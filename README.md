@@ -12,11 +12,11 @@ This repository contains the code for Hybrid-LLM-GNN transfer learning framework
 The basic requirement for using the files are a Python 3.9 with the packages listed in requirements.txt. It is advisable to create a virtual environment with the correct dependencies.
 
 ## Source code for proposed approach
-* [`ALIGNN_BERT_TL.ipynb`](./ALIGNN_BERT_TL.ipynb): a example notebook that sets up enviroment/installation, loads input data, extracts features and runs through the modelling pipeline with example dataset. Also accessible online at [`Google Colab`](https://colab.research.google.com/drive/1gsZoLey_M7e1e3GMOxdUrRaRh720DOlQ?usp=sharing)
-* [`generator.py`](./generator.py): code to generate text descriptions for crystal samples using Robocystallographer and ChemNLP tools.
+* [`ALIGNN_BERT_TL_crystal.ipynb`](./ALIGNN_BERT_TL_crystal.ipynb): a example notebook that sets up enviroment/installation, loads input data, extracts features and runs through the modelling pipeline with example dataset. Also accessible online at [`Google Colab`](https://colab.research.google.com/drive/1gsZoLey_M7e1e3GMOxdUrRaRh720DOlQ?usp=sharing)
+* [`generater.py`](./generater.py): code to generate text descriptions for crystal samples using Robocystallographer and ChemNLP tools.
 * [`preprocess.py`](./preprocess.py): code to extract contextual-aware word embeddings from text representations.
-* [`feature.py`](./feature.py): code to combine LLM-based and GNN-based embeddings and construct datasets for predictor model.
-* [`CrossPropertyTL`](./CrossPropertyTL): contains code for training and inferring a forward model with fully-connected layers to predict material properties. The model architecture is a straightforward MLP with fully connected layers and is not the primary focus of this research.
+* [`features.py`](./features.py): code to combine LLM-based and GNN-based embeddings and construct datasets for predictor model.
+* `CrossPropertyTL`: contains code for training and inferring a forward model with fully-connected layers to predict material properties. The model architecture is a straightforward MLP with fully connected layers and is not the primary focus of this research.
    * `/elemnet/dl_regressors_tf2.py`: the main model training script which trains a model based on the config file and then evaluating performance by the testset.
    * `/sample`: the config files folder that stores configuration for each run.
    * `/log`: training logs saved which saved the printouts during training & evaluating.
